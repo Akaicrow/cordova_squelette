@@ -1,16 +1,16 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
-        "id": "cordova-plugin-whitelist.whitelist",
-        "runs": true
-    },
-    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/src/browser/DeviceProxy.js",
+        "id": "org.apache.cordova.device.DeviceProxy",
+        "runs": true
     },
     {
         "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
@@ -20,8 +20,8 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.dialogs/www/android/notification.js",
-        "id": "org.apache.cordova.dialogs.notification_android",
+        "file": "plugins/org.apache.cordova.dialogs/www/browser/notification.js",
+        "id": "org.apache.cordova.dialogs.notification_browser",
         "merges": [
             "navigator.notification"
         ]
